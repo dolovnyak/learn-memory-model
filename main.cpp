@@ -19,11 +19,11 @@ void f1() {
 //        b.store(1, std::memory_order_seq_cst);
 //        a.store(1, std::memory_order_seq_cst);
 //
-//        /// 3: any operations before a.store (b.store) will process before it, so order is correct (store b then a)
+//        /// 3: any operations before a.store will process before it, so order is correct (store b then a)
 //        b.store(1, std::memory_order_relaxed);
 //        a.store(1, std::memory_order_release);
 //
-//        /// 4: any operations before a.store (b.store) will process before it, so order is correct (store b then a)
+//        /// 4: any operations before a.store will process before it, so order is correct (store b then a)
 //        b.store(1, std::memory_order_relaxed);
 //        a.store(1, std::memory_order_release);
 //
