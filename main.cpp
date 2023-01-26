@@ -61,7 +61,7 @@ void f2() {
 //        while (!a.load(std::memory_order_acquire)) {}
 //        assert(b.load(std::memory_order_relaxed) == 1);
 
-        /// 6: could fail, despite load order is correct, because store order isn't correct. It's strange but it isn't fail too.
+        /// 6: could fail, despite load order is correct, because store order isn't correct. It's strange but it isn't fail too even with mixed order store.
         while (!a.load(std::memory_order_acquire)) {}
         assert(b.load(std::memory_order_relaxed) == 1);
 
